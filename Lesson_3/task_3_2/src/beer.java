@@ -1,6 +1,6 @@
- public class beer extends apple {
+public class Beer extends product {
 
-     public beer(int allweight, int value, String name) {
-         super(allweight, value, name);
-     }
- }
+    public Beer(int allweight, int value, String name) {
+        super(allweight, value, name);
+    }
+}

@@ -1,31 +1,42 @@
-import interfaces.IAddRoom;
+import hotel.Hotel;
+import room.Room;
+import room.Status;
+import service.Service;
 
-public class main {
+import java.util.Arrays;
+
+public class Main {
     public static void main(String[] args) {
 
-        client Alex = new client("Alex","Ake", 4,50);
-        Alex.putInRoom();
-        Alex.removeFromRoom();
+        Hotel hotel = new Hotel(5, 3);
 
-        room room4 = new room(4,50,false);
-        room4.infchange();
-        room4.change();
-        room4.infchange();
+        Service Service1 = hotel.addHotelService(new Service(300, "уборка"));
+        Service Service2 = hotel.addHotelService(new Service(500, "уборка люкс"));
+        Service Service3 = hotel.addHotelService(new Service(0, "не убираться"));
+        Service Service4 = hotel.addHotelService(new Service(10000, "убирается директор"));
 
-        service packet1 = new service(5,50,3,20);
-        packet1.changePriceRoom();
-        packet1.changePriceService();
+        System.out.println();
+        System.out.println(Arrays.toString(hotel.getHotelServices()));
+        System.out.println(Service1);
+        System.out.println();
 
-        maxQTY Now = new maxQTY(20,5);
+        System.out.println("Услуга была изменена");
+        Service1.changeProductPrice(325);
+        System.out.println(Service1);
+        System.out.println();
 
-        int n = Now.addroom();
-        System.out.println("Кол-во комнат в отеле было увеличенно , теперь их : "+ n);
-        n = Now.addService();
-        System.out.println("Кол-во услуг в отеле было увеличенно , теперь их : "+ n);
+        Room Room1 = hotel.addHotelRoom(new Room(100, Status.FREE));
+        Room Room2 = hotel.addHotelRoom(new Room(100, Status.FREE));
+        Room Room3 = hotel.addHotelRoom(new Room(125, Status.REPAIRED));
+        Room Room4 = hotel.addHotelRoom(new Room(100, Status.FREE));
 
-
-
+        System.out.println(Arrays.toString(hotel.getHotelRooms()));
+        System.out.println();
+        hotel.getHotelRoomById(Room4.getId()).changeStatus(Status.REPAIRED);
+        System.out.println("Статус комнаты был изменен");
+        System.out.println(hotel.getHotelRoomById(Room4.getId()));
 
     }
 
 }
+

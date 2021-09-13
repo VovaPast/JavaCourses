@@ -1,6 +1,6 @@
- public class apple extends product {
+public class Apple extends product {
 
-     public apple(int allweight, int value, String name) {
-         super(allweight, value, name);
-     }
- }
+    public Apple(int allweight, int value, String name) {
+        super(allweight, value, name);
+    }
+}
