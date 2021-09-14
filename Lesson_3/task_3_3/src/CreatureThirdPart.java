@@ -1,7 +1,6 @@
-public class CreatureThirdPart implements ILineStep{
+public class CreatureThirdPart implements LineStep{
     @Override
-    public IProductPart buildProductPart() {
-
+    public ProductPart buildProductPart() {
         System.out.println("Башня прибыла");
         return new ProductTower("башня") ;
     }

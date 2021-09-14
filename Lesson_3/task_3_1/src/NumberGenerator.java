@@ -1,13 +1,14 @@
 import java.util.Random;
 
 public class NumberGenerator {
-    public static int Generation() {
+
+    public static int generate() {
         Random random = new Random();
         int x = random.nextInt(899) + 100;
         return x;
     }
 
-    public static void Finding(int x) {
+    public static void findMaxNum(int x) {
 
         int a = x / 100;
         int b = (x / 10) % 10;

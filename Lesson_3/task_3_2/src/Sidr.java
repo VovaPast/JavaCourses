@@ -1,6 +1,5 @@
-public class Sidr extends Beer{
-
-    public Sidr(int allweight, int value, String name) {
-        super(allweight, value, name);
+public class Sidr extends Apple{
+    public Sidr(int weight, int value, String name) {
+        super(weight, value, name);
     }
 }

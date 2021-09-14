@@ -1,16 +1,16 @@
-interface IAssemblyLine{
-    IProduct assembleProduct(IProduct iProduct);
+interface AssemblyLine{
+    Product assembleProduct(Product iProduct);
 }
 
-interface ILineStep {
-    IProductPart buildProductPart();
+interface LineStep {
+    ProductPart buildProductPart();
 }
 
-interface IProduct {
-    void installFirstPart(IProductPart productPart);
-    void installSecondPart(IProductPart productPart);
-    void installThirdPart(IProductPart productPart);
+interface Product {
+    void installFirstPart(ProductPart productPart);
+    void installSecondPart(ProductPart productPart);
+    void installThirdPart(ProductPart productPart);
 }
 
-interface IProductPart {
+interface ProductPart {
 }

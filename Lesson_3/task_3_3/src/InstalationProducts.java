@@ -1,8 +1,8 @@
-public class InstalationProducts implements IProduct{
+public class InstalationProducts implements Product{
 
-    IProductPart body;
-    IProductPart tower;
-    IProductPart engine;
+    ProductPart body;
+    ProductPart tower;
+    ProductPart engine;
 
     InstalationProducts(ProductBody body, ProductEngine engine, ProductTower tower){
         this.body = body;
@@ -11,21 +11,21 @@ public class InstalationProducts implements IProduct{
     }
 
     @Override
-    public void installFirstPart(IProductPart productPart) {
+    public void installFirstPart(ProductPart productPart) {
 
         System.out.println("Корпус готов к установке деталей");
         System.out.println();
     }
 
     @Override
-    public void installSecondPart(IProductPart productPart) {
+    public void installSecondPart(ProductPart productPart) {
 
         System.out.println("Двигатель установлен");
         System.out.println();
     }
 
     @Override
-    public void installThirdPart(IProductPart productPart) {
+    public void installThirdPart(ProductPart productPart) {
 
         System.out.println("Башня установлена");
         System.out.println();

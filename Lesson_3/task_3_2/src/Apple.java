@@ -1,6 +1,5 @@
-public class Apple extends product {
-
-    public Apple(int allweight, int value, String name) {
-        super(allweight, value, name);
+public class Apple extends Product {
+    public Apple(int weight, int value, String name) {
+        super(weight, value, name);
     }
 }

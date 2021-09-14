@@ -1,7 +1,6 @@
-public class CreatureSecondPart implements ILineStep {
+public class CreatureSecondPart implements LineStep {
     @Override
-    public IProductPart buildProductPart() {
-
+    public ProductPart buildProductPart() {
         System.out.println("Двигатель прибыл");
         return new ProductEngine("двигатель");
     }

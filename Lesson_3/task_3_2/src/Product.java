@@ -1,29 +1,28 @@
-class product {
-    private  int allweight;
-    private  int value;
+class Product {
+    private int weight;
+    private int value;
     private String name;
 
-
-    public product(int allweight,int value, String name){
-        this.allweight = allweight;
+    public Product(int weight, int value, String name) {
+        this.weight = weight;
         this.value = value;
         this.name = name;
     }
-
-    public int getAllWeight(){
-        return allweight;
+    public int getWeight() {
+        return weight;
     }
-    public int getValue(){
+
+    public int getValue() {
         return value;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
 
 
-    public String toString(){
-        return name ;
+    public String toString() {
+        return name;
     }
-
 
 }
