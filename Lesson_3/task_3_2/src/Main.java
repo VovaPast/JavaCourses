@@ -18,12 +18,12 @@ public class Main {
         Products.add(BeerRussia);
         Product BeerPoland = new Beer(500, 70, "BeerPoland");
         Products.add(BeerPoland);
-        Product Something1 = new Sidr(50, 200, "Sidr1");
-        Products.add(Something1);
-        Product Something2 = new Sidr(100, 15, "Sidr2");
-        Products.add(Something2);
-        Product Something3 = new Sidr(500, 50, "Sidr3");
-        Products.add(Something3);
+        Product Sidr1 = new Sidr(50, 200, "Sidr1");
+        Products.add(Sidr1);
+        Product Sidr2 = new Sidr(100, 15, "Sidr2");
+        Products.add(Sidr2);
+        Product Sidr3 = new Sidr(500, 50, "Sidr3");
+        Products.add(Sidr3);
 
         int limitWarehouse = 3000;
         int warehouse = 0;
