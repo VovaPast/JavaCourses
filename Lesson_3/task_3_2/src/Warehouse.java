@@ -22,17 +22,17 @@ public class Warehouse {
         products.add(sidr1);
         Product sidr2 = new Sidr(100, 15, "Sidr2");
         products.add(sidr2);
-        Product sidr3 = new Sidr(500, 50, "Sidr3");
+        Product sidr3 = new Sidr(50, 50, "Sidr3");
         products.add(sidr3);
 
         int warehouseCapacity = 0;
         System.out.print("Товары поступившие на склад:");
 
         for (int i = 0; i < products.size(); i++) {
-            warehouseCapacity = warehouseCapacity + products.get(i).getWeight();
-            if (warehouseCapacity > 3000) {                                       // допустим лимит склада 3000 тонн
-                warehouseCapacity = warehouseCapacity - products.get(i).getWeight();
-            } else System.out.print(" " + products.get(i).getName() + ";");
+            if (warehouseCapacity <= 3000 - products.get(i).getWeight()){
+                warehouseCapacity = warehouseCapacity + products.get(i).getWeight();
+             System.out.print(" " + products.get(i).getName() + ";");
+            }
         }
         System.out.println();
         System.out.println("Товары, общим весом " + warehouseCapacity + " тонн, прибыли на склад.");

@@ -3,12 +3,11 @@ package hotel;
 import room.Room;
 import room.Status;
 import service.Service;
-
 import java.util.Arrays;
 
 public class Hotel implements HotelActions {
 
-    private final static int MULTIPLIER = 2;
+    private static final int INCREASING_NUM_SERVICES = 2;
 
     private Room[] hotelRooms;
     private Service[] hotelServices;
@@ -66,11 +65,11 @@ public class Hotel implements HotelActions {
     }
 
     private void increaseHotelServicesArray(Service[] hotelServices) {
-        this.hotelServices = Arrays.copyOf(hotelServices, hotelServices.length * MULTIPLIER);
+        this.hotelServices = Arrays.copyOf(hotelServices, hotelServices.length * INCREASING_NUM_SERVICES);
     }
 
     private void increaseHotelRoomsArray(Room[] hotelRooms) {
-        this.hotelRooms = Arrays.copyOf(hotelRooms, hotelRooms.length * MULTIPLIER);
+        this.hotelRooms = Arrays.copyOf(hotelRooms, hotelRooms.length * INCREASING_NUM_SERVICES);
     }
 
     public Service[] getHotelServices() {
