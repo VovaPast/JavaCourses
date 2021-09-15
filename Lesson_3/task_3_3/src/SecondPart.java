@@ -1,4 +1,4 @@
-public class CreatureSecondPart implements LineStep {
+public class SecondPart implements LineStep {
     @Override
     public ProductPart buildProductPart() {
         System.out.println("Двигатель прибыл");

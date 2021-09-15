@@ -1,9 +1,8 @@
 package service;
 
+import product.Product;
 
-import basis.Basis;
-
-public class Service extends Basis {
+public class Service extends Product {
 
     private String title;
 

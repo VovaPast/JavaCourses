@@ -15,7 +15,7 @@ public class Hotel implements HotelActions {
     private int currentNumberHotelRooms = 0;
     private int currentNumberHotelServices = 0;
 
-    public Hotel (int initialNumberHotelServices, int initialNumberHotelRooms) {
+    public Hotel(int initialNumberHotelServices, int initialNumberHotelRooms) {
         this.hotelRooms = new Room[initialNumberHotelRooms];
         this.hotelServices = new Service[initialNumberHotelServices];
     }
@@ -42,7 +42,7 @@ public class Hotel implements HotelActions {
 
     @Override
     public Room addHotelRoom(Room hotelRoom) {
-        if (currentNumberHotelRooms == hotelRooms.length ) {
+        if (currentNumberHotelRooms == hotelRooms.length) {
             increaseHotelRoomsArray(hotelRooms);
         }
         hotelRoom.setId(currentNumberHotelRooms);
@@ -57,7 +57,7 @@ public class Hotel implements HotelActions {
 
     @Override
     public Service addHotelService(Service hotelService) {
-        if (currentNumberHotelServices == hotelServices.length ) {
+        if (currentNumberHotelServices == hotelServices.length) {
             increaseHotelServicesArray(hotelServices);
         }
         hotelService.setId(currentNumberHotelServices);

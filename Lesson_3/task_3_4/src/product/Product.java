@@ -1,11 +1,11 @@
-package basis;
+package product;
 
-public abstract class Basis implements ActionsWithBasis {
+public abstract class Product implements ActionsWithBasis {
 
     private long price;
     private int id;
 
-    public Basis(long price) {
+    public Product(long price) {
         this.price = price;
     }
 

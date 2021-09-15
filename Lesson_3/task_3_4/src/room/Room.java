@@ -1,11 +1,9 @@
 package room;
 
-
-import basis.Basis;
-
+import product.Product;
 import static room.Status.*;
 
-public class Room extends Basis implements AdditionalRoomActions {
+public class Room extends Product implements AdditionalRoomActions {
 
     private Status status;
 
