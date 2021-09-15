@@ -1,6 +1,6 @@
 package product;
 
-public abstract class Product implements ActionsWithBasis {
+public abstract class Product implements  Option{
 
     private long price;
     private int id;

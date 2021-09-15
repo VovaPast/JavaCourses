@@ -1,4 +1,4 @@
-public class InstalationProducts implements Product{
+public class InstalationProducts implements ProductPart{
 
     ProductPart body;
     ProductPart tower;

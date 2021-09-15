@@ -1,5 +1,5 @@
 package product;
 
-public interface ActionsWithBasis {
+public interface Option {
     long changeProductPrice(long newPrice);
 }
