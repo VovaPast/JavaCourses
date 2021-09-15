@@ -25,16 +25,16 @@ public class Main {
         Product sidr3 = new Sidr(500, 50, "Sidr3");
         products.add(sidr3);
 
-        int capacity = 0;
+        int warehouseCapacity = 0;
         System.out.print("Товары поступившие на склад:");
         for (int i = 0; i < products.size(); i++) {
-            capacity = capacity + products.get(i).getWeight();
-            if (capacity > 3000) {                                       // допустим лимит склада 3000 тонн
-                capacity = capacity - products.get(i).getWeight();
+            warehouseCapacity = warehouseCapacity + products.get(i).getWeight();
+            if (warehouseCapacity > 3000) {                                       // допустим лимит склада 3000 тонн
+                warehouseCapacity = warehouseCapacity - products.get(i).getWeight();
             } else System.out.print(" " + products.get(i).getName() + ";");
         }
         System.out.println();
-        System.out.println("Товары, общим весом " + capacity + " тонн, прибыли на склад.");
+        System.out.println("Товары, общим весом " + warehouseCapacity + " тонн, прибыли на склад.");
     }
 }
 
