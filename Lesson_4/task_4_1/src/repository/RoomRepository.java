@@ -1,11 +1,18 @@
 package repository;
 
-import enums.WorkStatus;
+import models.Room;
 
 public interface RoomRepository {
 
-        boolean putIntoRoom();
-        boolean getFromRoom();
-        boolean changeWorkStatus(WorkStatus newWorkStatus);
+    Room save(Room room);
+
+    boolean remove(Room room);
+
+    boolean update(Room room);
+
+    Room getById(long id);
+
+    Room[] getAll();
 
 }
+
